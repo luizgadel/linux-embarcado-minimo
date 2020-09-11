@@ -1,4 +1,4 @@
-# Geração de imagem Linux Embarcado mínima
+# Sistema Embarcado Linux de Transmissão de dados por MQTT
 
 Este documento descreve os passos necessários para gerar uma imagem Linux pronta para ser embarcada contendo um script que coleta métricas de processamento e uso de memória e então as publica via MQTT.
 
