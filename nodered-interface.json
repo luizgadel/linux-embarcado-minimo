@@ -1,0 +1,482 @@
+[
+    {
+        "id": "f1cb6b91.d1b348",
+        "type": "tab",
+        "label": "dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f9ca55c2.d7bd38",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "Ram Utilizada",
+        "topic": "dse/vyctor_mikael_luiz/ram_utilizada",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "341431c4.b1a6ce"
+            ]
+        ]
+    },
+    {
+        "id": "8943686d.6b6f28",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "Ram total",
+        "topic": "dse/vyctor_mikael_luiz/ram_total",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 200,
+        "y": 300,
+        "wires": [
+            [
+                "ba6445cc.de2198"
+            ]
+        ]
+    },
+    {
+        "id": "ce59d549.fc3968",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "Porcentagem Ram usada",
+        "topic": "dse/vyctor_mikael_luiz/porcentagem_ram_usada",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 250,
+        "y": 420,
+        "wires": [
+            [
+                "55ccf764.163fc8"
+            ]
+        ]
+    },
+    {
+        "id": "e512f7f.f2eea08",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "CPU usuário",
+        "topic": "dse/vyctor_mikael_luiz/cpu_usuario",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 210,
+        "y": 480,
+        "wires": [
+            [
+                "99493e59.4d4f2"
+            ]
+        ]
+    },
+    {
+        "id": "dc4dabaf.b6ca48",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "CPU sistema",
+        "topic": "dse/vyctor_mikael_luiz/cpu_sistema",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 210,
+        "y": 540,
+        "wires": [
+            [
+                "acc73b0d.29c518"
+            ]
+        ]
+    },
+    {
+        "id": "9bedd166.f0382",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "CPU ocioso",
+        "topic": "dse/vyctor_mikael_luiz/cpu_ocioso",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 210,
+        "y": 600,
+        "wires": [
+            [
+                "89164ba5.781338"
+            ]
+        ]
+    },
+    {
+        "id": "8b5fe080.78806",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "Disco total",
+        "topic": "dse/vyctor_mikael_luiz/disco_total",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 200,
+        "y": 660,
+        "wires": [
+            [
+                "3e51e0e2.cf65e"
+            ]
+        ]
+    },
+    {
+        "id": "9e75fe89.4dce1",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "Disco usado",
+        "topic": "dse/vyctor_mikael_luiz/disco_usado",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "e72503ac.554ff"
+            ]
+        ]
+    },
+    {
+        "id": "ad66118c.6013e",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "Disco livre",
+        "topic": "dse/vyctor_mikael_luiz/disco_livre",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 200,
+        "y": 800,
+        "wires": [
+            [
+                "6be44525.e2eafc"
+            ]
+        ]
+    },
+    {
+        "id": "e065d1f7.12923",
+        "type": "mqtt in",
+        "z": "f1cb6b91.d1b348",
+        "name": "Porcentagem disco usado",
+        "topic": "dse/vyctor_mikael_luiz/porcentagem_disco_usado",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f6eed1e0.ffb15",
+        "x": 250,
+        "y": 860,
+        "wires": [
+            [
+                "7b697a41.097b24"
+            ]
+        ]
+    },
+    {
+        "id": "55ccf764.163fc8",
+        "type": "ui_gauge",
+        "z": "f1cb6b91.d1b348",
+        "name": "",
+        "group": "f5fdcbc1.c31938",
+        "order": 5,
+        "width": 14,
+        "height": 7,
+        "gtype": "gage",
+        "title": "Porcentagem RAM usada",
+        "label": "porcento",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 650,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7b697a41.097b24",
+        "type": "ui_gauge",
+        "z": "f1cb6b91.d1b348",
+        "name": "",
+        "group": "f5fdcbc1.c31938",
+        "order": 4,
+        "width": 11,
+        "height": 9,
+        "gtype": "wave",
+        "title": "Porcentagem disco usado",
+        "label": "%",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 650,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "ba6445cc.de2198",
+        "type": "ui_text",
+        "z": "f1cb6b91.d1b348",
+        "group": "f5fdcbc1.c31938",
+        "order": 2,
+        "width": 7,
+        "height": 2,
+        "name": "",
+        "label": "RAM total",
+        "format": "{{msg.payload}} GB",
+        "layout": "row-center",
+        "x": 600,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "341431c4.b1a6ce",
+        "type": "ui_text",
+        "z": "f1cb6b91.d1b348",
+        "group": "f5fdcbc1.c31938",
+        "order": 1,
+        "width": 7,
+        "height": 2,
+        "name": "",
+        "label": "RAM usada",
+        "format": "{{msg.payload}} GB",
+        "layout": "row-center",
+        "x": 610,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "89164ba5.781338",
+        "type": "ui_chart",
+        "z": "f1cb6b91.d1b348",
+        "name": "",
+        "group": "f5fdcbc1.c31938",
+        "order": 8,
+        "width": 10,
+        "height": 10,
+        "label": "CPU Ocioso",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6be44525.e2eafc",
+        "type": "ui_text",
+        "z": "f1cb6b91.d1b348",
+        "group": "f5fdcbc1.c31938",
+        "order": 6,
+        "width": 5,
+        "height": 3,
+        "name": "Disco livre",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 610,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "acc73b0d.29c518",
+        "type": "ui_chart",
+        "z": "f1cb6b91.d1b348",
+        "name": "",
+        "group": "f5fdcbc1.c31938",
+        "order": 9,
+        "width": 10,
+        "height": 10,
+        "label": "CPU Sistema",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99493e59.4d4f2",
+        "type": "ui_chart",
+        "z": "f1cb6b91.d1b348",
+        "name": "",
+        "group": "f5fdcbc1.c31938",
+        "order": 10,
+        "width": 10,
+        "height": 10,
+        "label": "CPU Usuário",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 610,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e72503ac.554ff",
+        "type": "ui_text",
+        "z": "f1cb6b91.d1b348",
+        "group": "f5fdcbc1.c31938",
+        "order": 3,
+        "width": 5,
+        "height": 3,
+        "name": "Disco usado",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 610,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "3e51e0e2.cf65e",
+        "type": "ui_text",
+        "z": "f1cb6b91.d1b348",
+        "group": "f5fdcbc1.c31938",
+        "order": 7,
+        "width": 5,
+        "height": 3,
+        "name": "disco total",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 600,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "f6eed1e0.ffb15",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "broker",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "f5fdcbc1.c31938",
+        "type": "ui_group",
+        "z": "",
+        "name": "Informações do Linux embarcado ",
+        "tab": "e3cf9b0d.fb23b8",
+        "order": 1,
+        "disp": true,
+        "width": "30",
+        "collapse": false
+    },
+    {
+        "id": "e3cf9b0d.fb23b8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
