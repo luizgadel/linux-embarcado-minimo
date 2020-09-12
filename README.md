@@ -166,3 +166,11 @@ A imagem já vem com um servidor SSH instalado, permitindo que um host inicie um
 Onde _address_ é o endereço IP da interface emulada da imagem, obtível com o comando _ifconfig_ na mesma.
 
 Para fechar a linha de comando da emulação e terminá-la, pode-se usar `Ctrl-A + X`.
+
+## Visualização das métricas de desempenho
+
+Com a imagem rodando, podemos visualizar as métricas de desempenho usando uma interface na ferramenta node-red. 
+
+Para isso, no prompt de comando, executamos o comando `node-red` para iniciar a ferramenta. O node-red então disponibiliza um endereço IP para acesso ao servidor onde executará a interface (nesse caso particular, `http://127.0.0.1:1880/`). 
+
+Após acessar o servidor, em configurações (ícone de 3 barras horizontais no canto superior direito), realizamos o import do arquivo `nodered-interface.json` e clicamos em `Deploy`. Em seguida, vamos em dashboard (o botão com ícone de gráfico de barras na barra lateral direita) e, clicando no botão de flecha em diagonal, abrimos o layout da interface em uma nova aba para finalmente visualizar as métricas de desempenho da imagem em execução.
